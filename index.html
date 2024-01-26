@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gomba</title>
+    <style>
+        body {
+            margin: 0% ;
+           
+            background-color: black;
+            color: white ;
+        }
+        .top{
+            margin: 0%;
+            padding: 0% ;
+            color: red  ;
+            text-align: center;
+
+
+        }
+        .form{
+            background-color: black;
+            color: white ;
+            text-align: center;
+        }
+    </style>
+
+
+
+</head>
+<body>
+    <div class="top">
+        <h1>Tamil Selvan Gomba..........</h1>
+            <br><br>
+        <h3 style="text-align: center;">Login the form given below</h3>
+                <br><br>
+            <div class="form">
+                <label for="name">Enter Your Name</label>
+                <input type="text" placeholder="Name " id="name" name="name" required />
+                    <br>
+                <label for="number">Enter Your Number</label>
+                <input type="text" name="password" id="password" min="10" placeholder="Number " required  />
+                    <br> 
+                    <input type="submit" value="Verify Me" onclick="Verify();" />
+
+
+            </div>
+
+            <script>
+                function Verify(){
+                    let name = document.getElementById('name').value ;
+                    let number = document.getElementById('password').value ;
+                    if(name.toLowerCase().slice(0,5)  === "tamil" ){
+                        console.log(name) ;
+                        console.log(number.slice(3,14) === "7397047763") ;
+                        if (number.charAt(0) === "+"){
+                          number = number.slice(4,14) ; 
+                            if(number == "7397047763"){
+                                    console.log(number);
+                                window.location.href="gomba.html" ;
+                            
+
+                            }
+                        }else{
+                            if(number == "7397047763"){
+                                console.log(number );
+                            window.location.href="gomba.html" ;
+                        
+
+                        }
+
+                    }
+                }
+
+
+
+
+                }
+            </script>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+</body>
+</html>
